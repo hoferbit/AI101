@@ -12,18 +12,17 @@ plt.scatter(xs,ys)
 
 w = 0.5
 
-for m in range(100):
-    for i in range(100):
-         x = xs[i]
-         y = ys[i]
-         y_pre = w * x
-         e = y - y_pre
-         alpha = 0.05
-         w = w + alpha*e*x
+for i in range(100):
+     x = xs[i]
+     y = ys[i]
+     y_pre = w * x
+     e = y - y_pre
+     alpha = 0.5
+     w = w + alpha*e*x
          
 y_pre = w * xs
 print(y_pre)
-
+print("w=",w)
 plt.plot(xs,y_pre)
 
 plt.show()
